@@ -1,0 +1,23 @@
+﻿<Window x:Class="TFSOnline.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TFSOnline"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Label>TFS Server:</Label>
+        <ComboBox Name="TFSUrlComboBox" >
+            <ComboBox.ToolTip>VSOnline: https://MyInstance.visualstudio.com
+            TFS OnPrem: http://vstfdevdiv:8080
+            </ComboBox.ToolTip>
+        </ComboBox>
+        <Label>Username:</Label>
+        <TextBox Name="userNameTextBox" />
+        <Label>Password:</Label>
+        <TextBox Name="passwordTextBox" />
+        <Button Name="QueryTFSButton" Content="Query TFS" Click="QueryTFSButton_Click"/>
+        <ListBox Name="NodesListBox" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+    </StackPanel>
+</Window>
